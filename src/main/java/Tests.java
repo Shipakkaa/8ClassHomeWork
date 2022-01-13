@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public class Tests {
-////// Answer 1
+
 
         private static ChromeDriver chromeDriver;
         private static FirefoxDriver firefoxDriver;
@@ -25,9 +25,9 @@ public class Tests {
 @BeforeClass
         public static void before(){
     System.setProperty("webdriver.chrome.driver", "C:\\Users\\Omer Brosh\\Downloads\\chromedriver.exe");
-//    System.setProperty("webdriver.gecko.driver","C:\\Users\\Omer Brosh\\Downloads\\geckodriver.exe");
+   System.setProperty("webdriver.gecko.driver","C:\\Users\\Omer Brosh\\Downloads\\geckodriver.exe");
         chromeDriver = new ChromeDriver();
-//        firefoxDriver = new FirefoxDriver();
+       firefoxDriver = new FirefoxDriver();
 
 
 
@@ -85,9 +85,7 @@ search.sendKeys("עידן חביב - רודף אהבה בימים");
             chromeDriver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
     chromeDriver.findElement(By.xpath("//*[@id=\"video-title\"]/yt-formatted-string")).click();
 
-          
-            search.clear();
-            search.sendKeys("תוותושש אני אוהב אותך ");
+         
             chromeDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
                 WebElement addSkip = chromeDriver.findElement(By.className("ytp-ad-skip-button-icon"));
 
